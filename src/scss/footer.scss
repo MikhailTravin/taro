@@ -1,0 +1,185 @@
+.footer {
+    padding: 60px 0px;
+    background: $white;
+    @media (max-width: $mobile) {
+        padding: 30px 0px;
+    }
+    // .footer__container
+    &__container {
+    }
+    // .footer__content
+    &__content {
+        margin: 0px 30px;
+        @media (max-width: $pc) {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+    // .footer__top
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 0px 40px 0px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 0px 30px 0px;
+        }
+    }
+    // .footer__bottom
+    &__bottom {
+    }
+}
+
+.top-footer {
+    // .top-footer__menu
+    &__menu {
+        flex: 1 1 auto;
+        margin: 0px 30px 0px 0px;
+        @media (max-width: $mobile) {
+            flex: 1 1 auto;
+            margin: 0px 0px 20px 0px;
+        }
+    }
+    // .top-footer__body
+    &__body {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: -5px;
+            @media (max-width: $mobile) {
+                justify-content: center;
+            }
+            li {
+                padding: 5px;
+                a {
+                    font-weight: 400;
+                    font-size: 18px;
+                    text-align: center;
+                    @media (max-width: $mobile) {
+                        font-size: 16px;
+                    }
+                    span {
+                        white-space: nowrap;
+                        padding: 5px 10px;
+                        @media (max-width: $tablet) {
+                            padding: 0px 0px 0px 0px;
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        display: flex;
+                        height: 2px;
+                        width: 0;
+                        background: $gold;
+                        transition: width 0.3s ease 0s;
+                        margin: 5px 0px 0px 0px;
+                    }
+                    &:hover {
+                        &::after {
+                            content: "";
+                            width: 100%;
+                        }
+                        @media (max-width: $tablet) {
+                            color: $gold;
+                        }
+                    }
+                    &._navigator-active {
+                        color: $gold;
+                    }
+                }
+            }
+        }
+    }
+    // .top-footer__contacts
+    &__contacts {
+        display: flex;
+        align-items: center;
+        flex: 0 1 548px;
+        @media (max-width: $mobile) {
+            flex: 1 1 auto;
+        }
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    // .top-footer__title
+    &__title {
+        font-weight: 400;
+        font-size: 18px;
+        margin: 0px 20px 0px 0px;
+        @media (max-width: $mobile) {
+            font-size: 16px;
+        }
+        @media (max-width: $mobileSmall) {
+            text-align: center;
+            margin: 0px 0px 10px 0px;
+        }
+    }
+    // .top-footer__socials
+    &__socials {
+        display: flex;
+        margin: -10px;
+    }
+    // .top-footer__social
+    &__social {
+        flex: 0 1 auto;
+        padding: 10px;
+        a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #5181b8;
+            &::before {
+                font-size: 20px;
+                color: $white;
+            }
+            &._icon-telegram {
+                background: #00a3d8;
+                &::before {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+.bottom-footer {
+    // .bottom-footer__body
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: -10px;
+        @media (max-width: $mobile) {
+            margin: -5px;
+        }
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    // .bottom-footer__column
+    &__column {
+        white-space: nowrap;
+        flex: 0 1 auto;
+        padding: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #454545;
+        a {
+            transition: all 0.3s ease 0s;
+            &:hover {
+                color: $gold;
+            }
+        }
+        @media (max-width: $mobile) {
+            padding: 5px;
+        }
+    }
+}

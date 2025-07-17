@@ -1,0 +1,127 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	position: relative;
+	a {
+		position: relative;
+		z-index: 10;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		border: 3px solid $gold;
+		background: $bg;
+		width: 226px;
+		height: 226px;
+		border-radius: 50%;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 110%;
+		text-align: center;
+		padding: 25px;
+		transition: all 0.3s ease 0s;
+		&::before {
+			margin: 10px 0px 0px 0px;
+			font-size: 14px;
+			color: $gold;
+		}
+		@media (max-width: $mobile) {
+			width: 188px;
+			height: 188px;
+			font-size: 18px;
+		}
+	}
+	span {
+		position: absolute;
+		right: -44px;
+		bottom: -17px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 188px;
+		height: 188px;
+		border: 1px solid $gold;
+		border-radius: 50%;
+		background: $gold;
+		@media (max-width: $mobile) {
+			width: 150px;
+			height: 150px;
+			right: -30px;
+			bottom: -10px;
+		}
+	}
+	&:hover {
+		a {
+			background: $white;
+		}
+		.button__hovers {
+			opacity: 1;
+		}
+	}
+	// .button__hovers
+	&__hovers {
+		opacity: 0;
+		transition: all 0.3s ease 0s;
+	}
+	// .button__hover-1
+	&__hover-1 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		.button__icon {
+			&::before {
+				font-size: 36px;
+			}
+		}
+	}
+	// .button__circle-1
+	&__circle-1 {
+		position: absolute;
+		top: 5px;
+		left: 32px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #b08450;
+	}
+	// .button__circle-2
+	&__circle-2 {
+		position: absolute;
+		top: 34px;
+		left: 4px;
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		background: #b08450;
+	}
+	// .button__icon
+	&__icon {
+		&::before {
+			font-size: 30px;
+			color: $gold;
+		}
+	}
+	// .button__hover-2
+	&__hover-2 {
+		position: absolute;
+		right: -20px;
+		top: 27px;
+	}
+	// .button__circle-3
+	&__circle-3 {
+		position: absolute;
+		top: -5px;
+		right: 30px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #b08450;
+	}
+	// .button__hover-3
+	&__hover-3 {
+		position: absolute;
+		bottom: -8px;
+		left: 23px;
+	}
+}
