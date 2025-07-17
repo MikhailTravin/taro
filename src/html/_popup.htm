@@ -1,0 +1,81 @@
+<div id="leave-request" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__body">
+				<div class="popup__image image-popup">
+					<img src="../img/popup-bg.png" alt="">
+					<div class="image-popup__items">
+						<div class="image-popup__item">
+							<p>
+								Бонус за регистрацию:
+							</p>
+							<p class="bold">
+								«Пособие для начинающего таролога»
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="popup__forms">
+					<div class="popup__titles">
+						<div class="popup__title">
+							Записаться на марафон
+						</div>
+						<button data-close type="button" class="popup__close _icon-close"></button>
+					</div>
+					<div class="popup__text">
+						<p>
+							Бонус за регистрацию:
+						</p>
+						<p class="bold">
+							«Пособие для начинающего таролога»
+						</p>
+					</div>
+					<form data-ajax data-popup-message="#thanks" action="sendmail.php" method="POST"
+						class="popup__form form">
+						<div class="form__inputs">
+							<div class="form__input">
+								<label for="name">Ваше имя</label>
+								<input id="name" type="text" name="name" placeholder="Имя">
+							</div>
+							<div class="form__input">
+								<label for="phone">Ваш номер телефона</label>
+								<input id="phone" data-required type="text" name="phone" placeholder="+7 999 999-99-99"
+									class="telephone">
+							</div>
+						</div>
+						<div class="form__checkbox">
+							<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+								name="form[]">
+							<label for="c_1" class="checkbox__label">
+								<span class="checkbox__icon"></span>
+								<span class="checkbox__text">Я согласен с <a href="#">политикой конфиденциальности</a>
+									и даю согласие
+									на обработку персональных данных</span>
+							</label>
+						</div>
+						<button type="submit" class="form__button">
+							Оставить заявку
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="thanks" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close _icon-close"></button>
+			<div class="popup__forms">
+				<div class="popup__title">
+					Спасибо за заявку
+				</div>
+				<p>
+					Мы свяжемся с вами
+					в ближайшее время
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
